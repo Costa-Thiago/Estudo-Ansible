@@ -1,0 +1,12 @@
+---
+- name: Criar novo usuario thiago
+  hosts: cliente01
+  gather_facts: true
+  tasks:
+   - name: Tarefa para criar usuario
+     user:
+      name: thiago
+      shell: /bin/bash 
+      password: 123
+
+...

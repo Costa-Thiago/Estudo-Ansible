@@ -1,0 +1,16 @@
+---
+- name: Instalando apache cliente01
+  hosts: cliente01
+  remote_user: root
+  tasks:
+   - name: install httpd
+     ansible.builtin.yum:
+      name: httpd
+      State: latest
+   - name: Escrever o arquivo de configuracao
+     ansible.builtin.template:
+      src: /srv/httpd.j2
+      dest: /etc/httpd.conf
+
+
+  ...

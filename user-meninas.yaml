@@ -1,0 +1,16 @@
+---
+- name: Criacao de Novo usuario Eliene e Maria 
+  hosts: all
+  gather_facts: true
+  tasks:
+   - name: Tarefa para cirar usuario Eliene
+     user:
+      name: eliene 
+      shell: /bin/bash
+      password: 456
+   - name: Tarefa para cirar usuario Maria 
+     user:
+      name: maria
+      shell: /bin/bash
+      password: 789
+...
